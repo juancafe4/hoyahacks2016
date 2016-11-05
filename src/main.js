@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
 import { Route, IndexRoute, Router, browserHistory } from 'react-router';
 
 import Splash from './components/Splash';
@@ -7,7 +7,7 @@ import Add from './components/Add';
 import Today from './components/Today';
 import Goals from './components/Goals';
 
-ReactDOM.render(
+render(
   <Router history={browserHistory}>
     <Route path='/'>
       <IndexRoute component={Splash}/>

@@ -21,3 +21,5 @@ router.route('/:id')
       res.status(err ? 400 : 200).send(err || 'Nutrition fact deleted');
     })
   })
+
+module.exports = router;

@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
 
-router.use('/nutrientfacts', require('./nutrientfacts'));
+router.use('/nutritionfacts', require('./nutritionfacts'));
 
 module.exports = router;

@@ -18,10 +18,15 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../build')));
 } else {
   const webpack = require('webpack');
-  const webpackConfig = require('../webpackDev');
+  const webpackConfig = require('../webpack.dev');
   const compiler = webpack(webpackConfig);
 
-  app.use(require('webpack-dev-middleware')(compiler));
+  app.use(require('webpack-dev-middleware')(compiler, {
+    noInfo: true, // need to set to true to avoid showing error messages
+    publicPath: webpackConfig.output.publicPath
+  }));
+
+  app.use(require('webpack-hot-middleware')(compiler));
 }
 
 app.use(morgan('dev'));
@@ -31,7 +36,7 @@ app.use(cookieParser());
 
 app.use('/api', require('./routes/api'));
 
-app.get('*', (requires) => {
+app.get('*', (req, res) => {
   let indexPath = path.join(__dirname, '../index.html');
   res.sendFile(indexPath);
 });
