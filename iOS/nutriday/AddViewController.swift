@@ -7,13 +7,20 @@
 //
 
 import UIKit
+import Alamofire
 
 class AddViewController: UIViewController, UIImagePickerControllerDelegate,
     UINavigationControllerDelegate{
 
+    @IBAction func upload_photo(_ sender: UIButton) {
+        UploadImage()
+    }
+    
     @IBOutlet weak var imageView: UIImageView!
     
+   
     @IBAction func cameraAction(_ sender: UIButton) {
+        
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
             let imagePicker = UIImagePickerController()
             imagePicker.delegate = self
@@ -27,6 +34,33 @@ class AddViewController: UIViewController, UIImagePickerControllerDelegate,
         imageView.image = image
         self.dismiss(animated: true, completion: nil)
     }
+    
+    func UploadImage() {
+        
+       let imageData = UIImageJPEGRepresentation(imageView.image!, 1)
+       
+        if (imageData == nil) {return ;}
+        
+        Alamofire.upload(
+            multipartFormData: { multipartFormData in
+                multipartFormData.append(imageData!, withName: "nutrition.jpg", mimeType: "image.jpg")
+        },
+            to: "http://10.126.79.192:8080",
+            encodingCompletion: { encodingResult in
+                switch encodingResult {
+                case .success(let upload, _, _):
+                    upload.responseJSON { response in
+                        debugPrint(response)
+                    }
+                case .failure(let encodingError):
+                    print(encodingError)
+                }
+        }
+        )
+
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

@@ -96,24 +96,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xhl-lo-9be">
-                                <rect key="frame" x="58" y="56" width="240" height="249"/>
+                                <rect key="frame" x="58" y="56" width="272" height="293"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kyI-lK-QRW">
-                                <rect key="frame" x="131" y="418" width="95" height="49"/>
-                                <state key="normal" title="Add Picture">
-                                    <color key="titleColor" red="1" green="0.998315556143066" blue="0.99768535336454323" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="7oX-Vw-nnb">
+                                <rect key="frame" x="168" y="357" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P0l-Lf-geE">
+                                <rect key="frame" x="95" y="441" width="184" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.12824997930000001" green="0.80185872319999996" blue="0.234723338" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Take Photo">
+                                    <color key="titleColor" red="1" green="0.9983155561" blue="0.99768535339999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="cameraAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nsm-WY-pqL"/>
+                                    <action selector="cameraAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HEN-x3-ddm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E3c-Dm-OCu">
+                                <rect key="frame" x="87" y="512" width="192" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.12824997926717488" green="0.80185872316360474" blue="0.23472333795772807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Upload Photo">
+                                    <color key="titleColor" red="0.95699648313530417" green="0.96748876795051808" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="upload_photo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="acQ-Dk-Zc4"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="kyI-lK-QRW" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="JkM-vs-wlX"/>
-                            <constraint firstItem="kyI-lK-QRW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pWQ-D3-Pjb"/>
-                        </constraints>
+                        <color key="backgroundColor" red="0.47864081530920699" green="0.59615060692281541" blue="0.80185872316360474" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="3Sf-Ph-FQ0"/>
                     <connections>
