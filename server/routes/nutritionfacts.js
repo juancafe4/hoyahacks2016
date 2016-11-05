@@ -18,7 +18,7 @@ router.route('/')
 router.route('/:id')
   .delete((req, res) => {
     Nutritionfact.findByIdAndRemove(req.params.id, (err, deletedFact) => {
-      res.status(err ? 400 : 200).send(err || 'Nutrition fact deleted');
+      res.status(err ? 400 : 200).send(err || 'Log deleted');
     })
   })
 
