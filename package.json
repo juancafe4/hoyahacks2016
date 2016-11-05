@@ -22,5 +22,21 @@
   "bugs": {
     "url": "https://github.com/juancafe4/hoyahacks2016/issues"
   },
-  "homepage": "https://github.com/juancafe4/hoyahacks2016#readme"
+  "homepage": "https://github.com/juancafe4/hoyahacks2016#readme",
+  "dependencies": {
+    "axios": "^0.15.2",
+    "body-parser": "^1.15.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.14.0",
+    "mongoose": "^4.6.6",
+    "morgan": "^1.7.0",
+    "path": "^0.12.7",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "react-router": "^3.0.0",
+    "redux": "^3.6.0",
+    "redux-logger": "^2.7.4",
+    "webpack": "^1.13.3",
+    "webpack-dev-middleware": "^1.8.4"
+  }
 }
