@@ -1,5 +1,10 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import RaisedButton from 'material-ui/RaisedButton';
+
+const style = {
+  margin: 12
+}
 
 export default class Goals extends Component {
   constructor(props) {
@@ -76,8 +81,8 @@ export default class Goals extends Component {
           <label>Sodium (mg)</label>
           <input type="number" value={this.state.sodium} data-key="sodium" onChange={this.changeInput} />
           <br/>
-          <button type="submit">Set</button>
-          <button onClick={this.removeGoal}>Remove</button>
+          <RaisedButton type="submit" label="Set" primary={true} style={style} />
+          <RaisedButton onClick={this.removeGoal} label="Reset" secondary={true} style={style} />
         </form>
       </div>
     )
