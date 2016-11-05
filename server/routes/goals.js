@@ -10,12 +10,12 @@ router.route('/')
     })
   })
   .post((req, res) => {
-    Goal.create(req.body, (err, newGoal) {
+    Goal.create(req.body, (err, newGoal) => {
       res.status(err ? 400 : 200).send(err || newGoal);
     })
   })
   .delete((req, res) => {
-    Goal.remove({}, (err, text) {
+    Goal.remove({}, (err, text) => {
       res.status(err ? 400 : 200).send(err || 'Goal deleted');
     })
   });

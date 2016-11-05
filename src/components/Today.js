@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { browserHistory } from 'react-router';
+import RaisedButton from 'material-ui/RaisedButton';
 import axios from 'axios';
+
+const style = {
+  margin: 12
+}
 
 export default class Today extends Component {
   constructor(props) {
@@ -48,7 +53,7 @@ export default class Today extends Component {
         <h4>Total Carbohydrates: {carbs}g</h4>
         <h4>Total Fat: {fat}g</h4>
         <h4>Total Sodium: {sodium}mg</h4>
-        <button onClick={this.setGoal}>Set Goal</button>
+        <RaisedButton onClick={this.setGoal} label="Set Goal" primary={true} style={style} />
       </div>
     )
   }
