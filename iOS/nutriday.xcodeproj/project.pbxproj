@@ -417,6 +417,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = UZLLWTZ67N;
 				INFOPLIST_FILE = nutriday/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = none.nutriday;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -430,6 +431,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = UZLLWTZ67N;
 				INFOPLIST_FILE = nutriday/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = none.nutriday;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -514,6 +516,7 @@
 				AFE5EAC61DCDB408001353AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AFE5EAC71DCDB408001353AD /* Build configuration list for PBXNativeTarget "nutridayTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +525,7 @@
 				AFE5EAC91DCDB408001353AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AFE5EACA1DCDB408001353AD /* Build configuration list for PBXNativeTarget "nutridayUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +534,7 @@
 				AFE5EACC1DCDB408001353AD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
