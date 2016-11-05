@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import RaisedButton from 'material-ui/RaisedButton';
+import ActionAndroid from 'material-ui/svg-icons/action/android';
+import FontIcon from 'material-ui/FontIcon';
 
 export default class Add extends Component {
   constructor(){
@@ -22,10 +25,11 @@ export default class Add extends Component {
     data.append('language', 'eng');
     axios.post('https://api.ocr.space/Parse/Image', data)
       .then(res => {
-        let upc = res.data.ParsedResults[0].ParsedText.replace(/\s/g,"");
-        axios.get(`https://api.nutritionix.com/v1_1/item?upc=${upc}&appId=a19f0c32&appKey=68538cd0fee344384aa30f8a3670a3a4`)
-        .then(res => this.setState({ nutritionfacts : res.data }))
-        .catch();
+        // let upc = res.data.ParsedResults[0].ParsedText.replace(/\s/g,"");
+        // axios.get(`https://api.nutritionix.com/v1_1/item?upc=${upc}&appId=a19f0c32&appKey=68538cd0fee344384aa30f8a3670a3a4`)
+        // .then(res => this.setState({ nutritionfacts : res.data }))
+        // .catch();
+        this.setState({ nutritionfacts : res.data })
       })
       .catch();
   }
@@ -47,24 +51,25 @@ export default class Add extends Component {
   render() {
     // console.log("nutrition Facts",this.state.nutritionfacts);
     let NutriFactView = "";
-    let { brand_name,
-          item_name,
-          nf_calories,
-          nf_protein,
-          nf_total_carbohydrate,
-          nf_sodium,
-          nf_total_fat } = this.state.nutritionfacts;
+    // let { brand_name,
+    //       item_name,
+    //       nf_calories,
+    //       nf_protein,
+    //       nf_total_carbohydrate,
+    //       nf_sodium,
+    //       nf_total_fat } = this.state.nutritionfacts;
     if (this.state.nutritionfacts !== "") {
       NutriFactView = (
-        <ul>
-          <li><h2>{brand_name}</h2></li>
-          <li><h3>{item_name}</h3></li>
-          <li>Calories: {nf_calories}kcal</li>
-          <li>Protiens: {nf_protein}g</li>
-          <li>Carbs: {nf_total_carbohydrate}g</li>
-          <li>Sodium: {nf_sodium}mg</li>
-          <li>Fat: {nf_total_fat}g</li>
-        </ul>
+        this.state.nutritionfacts.ParsedResults[0].ParsedText
+        // <ul>
+        //   <li><h2>{brand_name}</h2></li>
+        //   <li><h3>{item_name}</h3></li>
+        //   <li>Calories: {nf_calories}kcal</li>
+        //   <li>Protiens: {nf_protein}g</li>
+        //   <li>Carbs: {nf_total_carbohydrate}g</li>
+        //   <li>Sodium: {nf_sodium}mg</li>
+        //   <li>Fat: {nf_total_fat}g</li>
+        // </ul>
       );
     }
     return (
@@ -72,8 +77,19 @@ export default class Add extends Component {
         <div className="col-sm-6">
           <h2>Add Nutrition facts</h2>
           <img width="150" src={this.state.imgpreURL} />
-          <input type="file" onChange={this._onInputChange} />
-          <button onClick={this.getFacts}>Get facts</button>
+          <br/>
+          <RaisedButton
+            label="Select Image"
+            labelPosition="before"
+            style={styles.button}
+            containerElement="label"
+            primary={true}
+          >
+            <input type="file" onChange={this._onInputChange} style={styles.exampleImageInput} />
+          </RaisedButton>
+          {/* <input type="file" onChange={this._onInputChange} /> */}
+          <RaisedButton label="Get Facts" onClick={this.getFacts} secondary={true} style={styles.button} />
+          {/* <button onClick={this.getFacts}>Get facts</button> */}
         </div>
         <div className="col-sm-6">
           {NutriFactView}
@@ -82,3 +98,19 @@ export default class Add extends Component {
     )
   }
 }
+
+const styles = {
+  button: {
+    margin: 12,
+  },
+  exampleImageInput: {
+    cursor: 'pointer',
+    position: 'absolute',
+    top: 0,
+    bottom: 0,
+    right: 0,
+    left: 0,
+    width: '100%',
+    opacity: 0,
+  },
+};
