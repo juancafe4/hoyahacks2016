@@ -2,7 +2,6 @@ const mongoose = require('mongoose');
 
 const nutritionFactSchema = new mongoose.Schema({
   calories: {type: Number},
-  caloriesFromFat: {type: Number},
   protein: {type: Number},
   carbs: {type: Number},
   fat: {type: Number},

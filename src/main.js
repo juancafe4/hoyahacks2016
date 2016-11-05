@@ -1,6 +1,9 @@
 import React from 'react';
 import { render } from 'react-dom';
+import { Provider } from 'react-redux';
 import { Route, IndexRoute, Router, browserHistory } from 'react-router';
+
+//import store from './store';
 
 import Splash from './components/Splash';
 import App from './components/App';
