@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF3722431DCE29F5002C3D2C /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3722421DCE29F5002C3D2C /* AddViewController.swift */; };
 		AFE5EAA01DCDB408001353AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE5EA9F1DCDB408001353AD /* AppDelegate.swift */; };
 		AFE5EAA21DCDB408001353AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE5EAA11DCDB408001353AD /* ViewController.swift */; };
 		AFE5EAA51DCDB408001353AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFE5EAA31DCDB408001353AD /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF3722421DCE29F5002C3D2C /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		AFE5EA9C1DCDB408001353AD /* nutriday.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nutriday.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFE5EA9F1DCDB408001353AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFE5EAA11DCDB408001353AD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 			children = (
 				AFE5EA9F1DCDB408001353AD /* AppDelegate.swift */,
 				AFE5EAA11DCDB408001353AD /* ViewController.swift */,
+				AF3722421DCE29F5002C3D2C /* AddViewController.swift */,
 				AFE5EAA31DCDB408001353AD /* Main.storyboard */,
 				AFE5EAA61DCDB408001353AD /* Assets.xcassets */,
 				AFE5EAA81DCDB408001353AD /* LaunchScreen.storyboard */,
@@ -264,6 +267,7 @@
 			files = (
 				AFE5EAA21DCDB408001353AD /* ViewController.swift in Sources */,
 				AFE5EAA01DCDB408001353AD /* AppDelegate.swift in Sources */,
+				AF3722431DCE29F5002C3D2C /* AddViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
