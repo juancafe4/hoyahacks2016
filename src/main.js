@@ -13,6 +13,8 @@ import App from './components/App';
 import Add from './components/Add';
 import Today from './components/Today';
 import Preferences from './components/Preferences';
+import History from './components/History';
+
 
 const muiTheme = getMuiTheme({
   fontFamily: 'Roboto, sans-serif',
@@ -37,6 +39,7 @@ render(
         <Route path='/add' component={Add}/>
         <Route path='/today' component={Today}/>
         <Route path='/preferences' component={Preferences}/>
+        <Route path='/history' component={History}/>
       </Route>
     </Router>
   </MuiThemeProvider>,
