@@ -174,7 +174,7 @@ export default class Preferences extends Component {
 
   render() {
     return (
-      <div>
+      <div className="container">
         <h1>Daily Goals</h1>
         <hr/>
         <form onSubmit={this.setGoal}>

@@ -5,7 +5,7 @@ export default class App extends Component {
     return (
       <div>
         <NavBar/>
-        <div className="container">
+        <div>
            {this.props.children}
         </div>
       </div>

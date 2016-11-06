@@ -50,7 +50,7 @@ export default class Add extends Component {
 
   render() {
     // console.log("nutrition Facts",this.state.nutritionfacts);
-    let NutriFactView = "";
+    let NutriFactView = "", imgView="";
     // let { brand_name,
     //       item_name,
     //       nf_calories,
@@ -72,12 +72,14 @@ export default class Add extends Component {
         // </ul>
       );
     }
+    if (this.state.imgpreURL !== "") {
+      imgView = (<img width="150" src={this.state.imgpreURL} />);
+    }
     return (
-      <div className="row">
+      <div className="row container">
         <div className="col-sm-6">
           <h2>Add Nutrition facts</h2>
-          <img width="150" src={this.state.imgpreURL} />
-          <br/>
+          <hr/>
           <RaisedButton
             label="Select Image"
             labelPosition="before"
@@ -85,11 +87,12 @@ export default class Add extends Component {
             containerElement="label"
             primary={true}
           >
-            <input type="file" onChange={this._onInputChange} style={styles.exampleImageInput} />
+            <input type="file" onChange={this._onInputChange} style={styles.exampleImageInput} alt="SELECT IMAGE"/>
           </RaisedButton>
           {/* <input type="file" onChange={this._onInputChange} /> */}
           <RaisedButton label="Get Facts" onClick={this.getFacts} secondary={true} style={styles.button} />
           {/* <button onClick={this.getFacts}>Get facts</button> */}
+          {imgView}
         </div>
         <div className="col-sm-6">
           {NutriFactView}

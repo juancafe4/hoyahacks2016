@@ -45,7 +45,7 @@ export default class Today extends Component {
   render() {
     let { calories, protein, carbs, fat, sodium } = this.state;
     return (
-      <div>
+      <div className="container">
         <h1>How You're Doing</h1>
         <hr/>
         <h4>Total Calories: {calories}kcal</h4>
