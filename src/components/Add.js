@@ -138,6 +138,8 @@ export default class Add extends Component {
         <div className="col-sm-6">
           <h2>Add Nutrition facts</h2>
           <hr/>
+          {imgView}
+          <br/>
           <RaisedButton
             label="Select Image"
             labelPosition="before"
@@ -149,8 +151,8 @@ export default class Add extends Component {
           </RaisedButton>
           {/* <input type="file" onChange={this._onInputChange} /> */}
           <RaisedButton label="Get Facts" onClick={this.getFacts} secondary={true} style={styles.button} />
+          <br/>
           {/* <button onClick={this.getFacts}>Get facts</button> */}
-          {imgView}
         </div>
         <div className="col-sm-6">
           {NutriFactView}
