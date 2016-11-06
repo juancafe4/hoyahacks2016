@@ -6,7 +6,7 @@ const nutritionFactSchema = new mongoose.Schema({
   carbs: {type: Number},
   fat: {type: Number},
   sodium: {type: Number},
-  date: {type: Date}
+  date: {type: Date, default: Date.now}
 });
 
 const NutritionFact = mongoose.model('NutritionFact', nutritionFactSchema);

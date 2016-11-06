@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { browserHistory } from 'react-router';
 import axios from 'axios';
 import RaisedButton from 'material-ui/RaisedButton';
 import ActionAndroid from 'material-ui/svg-icons/action/android';
@@ -14,7 +15,7 @@ export default class Add extends Component {
     };
     this._onInputChange = this._onInputChange.bind(this);
     this.getFacts = this.getFacts.bind(this);
-
+    this.addFact = this.addFact.bind(this);
   }
 
   getFacts(){
@@ -48,6 +49,21 @@ export default class Add extends Component {
     reader.readAsDataURL(file);
   }
 
+  addFact() {
+    let parsedText = this.state.nutritionfacts.ParsedResults[0].ParsedText;
+
+    //console.log ('parsedText:', parsedText);
+    // let nutritionFactObj = {
+    //
+    // }
+
+    // axios.post('/api/nutritionfacts', this.state.nutritionfacts.ParsedResults[0].ParsedText)
+    //   .then(() => {
+    //     browserHistory.push('/today')
+    //   })
+    //   .catch(console.error)
+  }
+
   render() {
     // console.log("nutrition Facts",this.state.nutritionfacts);
     let NutriFactView = "", imgView="";
@@ -60,7 +76,17 @@ export default class Add extends Component {
     //       nf_total_fat } = this.state.nutritionfacts;
     if (this.state.nutritionfacts !== "") {
       NutriFactView = (
-        this.state.nutritionfacts.ParsedResults[0].ParsedText
+        <div>
+          <h4>{this.state.nutritionfacts.ParsedResults[0].ParsedText}</h4>
+          <RaisedButton
+            label="Add to Log"
+            labelPosition="before"
+            style={styles.button}
+            containerElement="label"
+            primary={true}
+            onClick={this.addFact}
+          />
+        </div>
         // <ul>
         //   <li><h2>{brand_name}</h2></li>
         //   <li><h3>{item_name}</h3></li>

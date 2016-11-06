@@ -23,9 +23,10 @@ export default class Today extends Component {
 
   componentDidMount() {
     let nutritionFacts;
-    axios.get('/')
+    axios.get('/api/nutritionfacts')
       .then(res => {
         nutritionFacts = res.data;
+        console.log ('nutritionFacts:', nutritionFacts)
       })
       .catch(console.error);
 
@@ -39,7 +40,7 @@ export default class Today extends Component {
   }
 
   setGoal() {
-    browserHistory.push('/goals');
+    browserHistory.push('/preferences');
   }
 
   render() {
@@ -53,7 +54,7 @@ export default class Today extends Component {
         <h4>Total Carbohydrates: {carbs}g</h4>
         <h4>Total Fat: {fat}g</h4>
         <h4>Total Sodium: {sodium}mg</h4>
-        <RaisedButton onClick={this.setGoal} label="Set Goal" primary={true} style={style} />
+        <RaisedButton onClick={this.setGoal} label="Set Preferences" primary={true} style={style} />
       </div>
     )
   }
