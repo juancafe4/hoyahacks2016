@@ -10,6 +10,8 @@
 		AF17054F1DCE8E5B00BF08AD /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF17054C1DCE8E4F00BF08AD /* Alamofire.framework */; };
 		AF1705501DCE8E5B00BF08AD /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AF17054C1DCE8E4F00BF08AD /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AF3722431DCE29F5002C3D2C /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3722421DCE29F5002C3D2C /* AddViewController.swift */; };
+		AFA3054C1DCF007E002C3E51 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFA3054A1DCF007E002C3E51 /* TableViewCell.swift */; };
+		AFA3054D1DCF007E002C3E51 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFA3054B1DCF007E002C3E51 /* TableViewCell.xib */; };
 		AFC3100E1DCEB78D00A8861F /* GoalsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC3100D1DCEB78D00A8861F /* GoalsTableViewController.swift */; };
 		AFE5EAA01DCDB408001353AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE5EA9F1DCDB408001353AD /* AppDelegate.swift */; };
 		AFE5EAA21DCDB408001353AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE5EAA11DCDB408001353AD /* ViewController.swift */; };
@@ -55,6 +57,8 @@
 		AF17054C1DCE8E4F00BF08AD /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		AF3722421DCE29F5002C3D2C /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		AF6264E91DCE705100DEF789 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		AFA3054A1DCF007E002C3E51 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		AFA3054B1DCF007E002C3E51 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		AFC3100D1DCEB78D00A8861F /* GoalsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalsTableViewController.swift; sourceTree = "<group>"; };
 		AFE5EA9C1DCDB408001353AD /* nutriday.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nutriday.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFE5EA9F1DCDB408001353AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -135,6 +139,8 @@
 				AF3722421DCE29F5002C3D2C /* AddViewController.swift */,
 				AFC3100D1DCEB78D00A8861F /* GoalsTableViewController.swift */,
 				AFE5EAA31DCDB408001353AD /* Main.storyboard */,
+				AFA3054A1DCF007E002C3E51 /* TableViewCell.swift */,
+				AFA3054B1DCF007E002C3E51 /* TableViewCell.xib */,
 				AFE5EAA61DCDB408001353AD /* Assets.xcassets */,
 				AFE5EAA81DCDB408001353AD /* LaunchScreen.storyboard */,
 				AFE5EAAB1DCDB408001353AD /* Info.plist */,
@@ -272,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFE5EAAA1DCDB408001353AD /* LaunchScreen.storyboard in Resources */,
+				AFA3054D1DCF007E002C3E51 /* TableViewCell.xib in Resources */,
 				AFE5EAA71DCDB408001353AD /* Assets.xcassets in Resources */,
 				AFE5EAA51DCDB408001353AD /* Main.storyboard in Resources */,
 			);
@@ -298,6 +305,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFA3054C1DCF007E002C3E51 /* TableViewCell.swift in Sources */,
 				AFE5EAA21DCDB408001353AD /* ViewController.swift in Sources */,
 				AFE5EAA01DCDB408001353AD /* AppDelegate.swift in Sources */,
 				AFC3100E1DCEB78D00A8861F /* GoalsTableViewController.swift in Sources */,
