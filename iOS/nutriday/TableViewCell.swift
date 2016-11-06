@@ -9,8 +9,13 @@
 import UIKit
 
 class TableViewCell: UITableViewCell {
+    @IBOutlet weak var calories: UILabel!
 
     @IBOutlet weak var cont: UIView!
+    @IBOutlet weak var sodium: UILabel!
+    @IBOutlet weak var carbs: UILabel!
+    @IBOutlet weak var fat: UILabel!
+    @IBOutlet weak var protein: UILabel!
  
     @IBOutlet weak var dateLabel: UILabel!
     override func awakeFromNib() {
