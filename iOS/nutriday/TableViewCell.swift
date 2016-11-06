@@ -12,7 +12,9 @@ class TableViewCell: UITableViewCell {
 
     @IBOutlet weak var dateLabel: UILabel!
     override func awakeFromNib() {
+        @IBOutlet weak var container: UIView!
         super.awakeFromNib()
+
         // Initialization code
     }
 

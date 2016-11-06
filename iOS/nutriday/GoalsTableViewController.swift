@@ -40,6 +40,7 @@ class GoalsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = Bundle.main.loadNibNamed("TableViewCell", owner: self, options: nil)?.first as! TableViewCell
         cell.backgroundColor = UIColor.clear
+        cell.dateLabel.font = UIFont(name: cell.dateLabel.font.fontName, size: 36)
         return cell
     }
     
