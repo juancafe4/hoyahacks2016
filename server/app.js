@@ -6,6 +6,7 @@ const cookieParser = require('cookie-parser');
 const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
+const multer  = require('multer')
 
 require('mongoose').connect(MONGODB_URL, err => {
   if (err) throw err;

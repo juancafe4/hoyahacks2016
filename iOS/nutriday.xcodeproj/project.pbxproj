@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF17054F1DCE8E5B00BF08AD /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF17054C1DCE8E4F00BF08AD /* Alamofire.framework */; };
+		AF1705501DCE8E5B00BF08AD /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AF17054C1DCE8E4F00BF08AD /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AF3722431DCE29F5002C3D2C /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3722421DCE29F5002C3D2C /* AddViewController.swift */; };
-		AF6264EB1DCE852600DEF789 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF6264E91DCE705100DEF789 /* Alamofire.framework */; };
-		AF6264EC1DCE852600DEF789 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AF6264E91DCE705100DEF789 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AFC3100E1DCEB78D00A8861F /* GoalsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC3100D1DCEB78D00A8861F /* GoalsTableViewController.swift */; };
 		AFE5EAA01DCDB408001353AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE5EA9F1DCDB408001353AD /* AppDelegate.swift */; };
 		AFE5EAA21DCDB408001353AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE5EAA11DCDB408001353AD /* ViewController.swift */; };
 		AFE5EAA51DCDB408001353AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFE5EAA31DCDB408001353AD /* Main.storyboard */; };
@@ -37,13 +38,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		AF6264ED1DCE852600DEF789 /* Embed Frameworks */ = {
+		AF1705511DCE8E5B00BF08AD /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				AF6264EC1DCE852600DEF789 /* Alamofire.framework in Embed Frameworks */,
+				AF1705501DCE8E5B00BF08AD /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -51,8 +52,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AF17054C1DCE8E4F00BF08AD /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		AF3722421DCE29F5002C3D2C /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		AF6264E91DCE705100DEF789 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		AFC3100D1DCEB78D00A8861F /* GoalsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalsTableViewController.swift; sourceTree = "<group>"; };
 		AFE5EA9C1DCDB408001353AD /* nutriday.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nutriday.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFE5EA9F1DCDB408001353AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFE5EAA11DCDB408001353AD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,7 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF6264EB1DCE852600DEF789 /* Alamofire.framework in Frameworks */,
+				AF17054F1DCE8E5B00BF08AD /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,6 +108,7 @@
 		AFE5EA931DCDB408001353AD = {
 			isa = PBXGroup;
 			children = (
+				AF17054C1DCE8E4F00BF08AD /* Alamofire.framework */,
 				AFE5EA9E1DCDB408001353AD /* nutriday */,
 				AFE5EAB31DCDB408001353AD /* nutridayTests */,
 				AFE5EABE1DCDB408001353AD /* nutridayUITests */,
@@ -129,6 +133,7 @@
 				AFE5EA9F1DCDB408001353AD /* AppDelegate.swift */,
 				AFE5EAA11DCDB408001353AD /* ViewController.swift */,
 				AF3722421DCE29F5002C3D2C /* AddViewController.swift */,
+				AFC3100D1DCEB78D00A8861F /* GoalsTableViewController.swift */,
 				AFE5EAA31DCDB408001353AD /* Main.storyboard */,
 				AFE5EAA61DCDB408001353AD /* Assets.xcassets */,
 				AFE5EAA81DCDB408001353AD /* LaunchScreen.storyboard */,
@@ -165,7 +170,7 @@
 				AFE5EA981DCDB408001353AD /* Sources */,
 				AFE5EA991DCDB408001353AD /* Frameworks */,
 				AFE5EA9A1DCDB408001353AD /* Resources */,
-				AF6264ED1DCE852600DEF789 /* Embed Frameworks */,
+				AF1705511DCE8E5B00BF08AD /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -295,6 +300,7 @@
 			files = (
 				AFE5EAA21DCDB408001353AD /* ViewController.swift in Sources */,
 				AFE5EAA01DCDB408001353AD /* AppDelegate.swift in Sources */,
+				AFC3100E1DCEB78D00A8861F /* GoalsTableViewController.swift in Sources */,
 				AF3722431DCE29F5002C3D2C /* AddViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

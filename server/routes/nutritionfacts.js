@@ -4,6 +4,9 @@ const path = require('path');
 const fs = require('fs');
 
 const Nutritionfact = require('../models/nutritionfact');
+const multer  = require('multer')
+
+let  upload = multer({});
 
 router.route('/')
   .get((req, res) => {
@@ -17,20 +20,9 @@ router.route('/')
     })
   })
 
-router.post('/upload', (req, res) => {
-  let tempPath = req.files.file.path,
-    targetPath = path.resolve('./uploads/image.jpg');
-  if (path.extname(req.files.file.name).toLowerCase() === '.jpg') {
-    fs.rename(tempPath, targetPath, function(err) {
-      if (err) throw err;
-      console.log("Upload completed!");
-    });
-  } else {
-    fs.unlink(tempPath, function () {
-      if (err) throw err;
-      console.error("Only .jpg files are allowed!");
-    });
-  }
+router.post('/upload', upload.single('file'), (req, res) => {
+  console.log('Here uploading ', req.file)
+  res.send({result: "success"})
 });
 
 router.route('/:id')

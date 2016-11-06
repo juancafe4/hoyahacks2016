@@ -12,7 +12,7 @@ import Splash from './components/Splash';
 import App from './components/App';
 import Add from './components/Add';
 import Today from './components/Today';
-import Goals from './components/Goals';
+import Preferences from './components/Preferences';
 
 const muiTheme = getMuiTheme({
   fontFamily: 'Roboto, sans-serif',
@@ -36,7 +36,7 @@ render(
         <IndexRoute component={Splash}/>
         <Route path='/add' component={Add}/>
         <Route path='/today' component={Today}/>
-        <Route path='/goals' component={Goals}/>
+        <Route path='/preferences' component={Preferences}/>
       </Route>
     </Router>
   </MuiThemeProvider>,
