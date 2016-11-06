@@ -18,11 +18,6 @@
                 <rect key="frame" x="0.0" y="0.0" width="479" height="350.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="001-tC-Z0C">
-                        <rect key="frame" x="18" y="98" width="444" height="222"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Yesterday" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nnP-rz-w2q">
                         <rect key="frame" x="171" y="16" width="173" height="65"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -30,10 +25,15 @@
                         <color key="textColor" red="0.1287730634" green="0.79939639569999998" blue="0.23761862519999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="avw-I2-9XM">
+                        <rect key="frame" x="68" y="108" width="352" height="206"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
                 </subviews>
             </tableViewCellContentView>
             <connections>
-                <outlet property="container" destination="001-tC-Z0C" id="3yA-9X-MMH"/>
+                <outlet property="cont" destination="avw-I2-9XM" id="diL-OI-GDP"/>
                 <outlet property="dateLabel" destination="nnP-rz-w2q" id="8ln-X1-7EW"/>
             </connections>
             <point key="canvasLocation" x="65.5" y="4.5"/>
