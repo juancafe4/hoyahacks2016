@@ -10,12 +10,19 @@ router.route('/')
     })
   })
   .post((req, res) => {
-    Goal.create(req.body, (err, newGoal) => {
-      res.status(err ? 400 : 200).send(err || newGoal);
+    Goal.create(req.body, (err, newGoals) => {
+      res.status(err ? 400 : 200).send(err || newGoals);
+    })
+  })
+
+router.route('/:id')
+  .put((req, res) => {
+    Goal.findByIdAndUpdate(req.params.id, {$set: req.body}, {new: true}, (err, updateGoals) => {
+      res.status(err ? 400 : 200).send(err || updateGoals);
     })
   })
   .delete((req, res) => {
-    Goal.remove({}, (err, text) => {
+    Goal.findByIdAndRemove(req.params.id, (err, text) => {
       res.status(err ? 400 : 200).send(err || 'Goal deleted');
     })
   });
