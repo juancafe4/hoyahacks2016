@@ -51,11 +51,14 @@ class AddViewController: UIViewController, UIImagePickerControllerDelegate,
                 switch encodingResult {
                 case .success(let upload, _, _):
                     upload.responseJSON { response in
-                        debugPrint(response)
+                        print(response)
                     }
+                    break;
                 case .failure(let encodingError):
                     print(encodingError)
+                    break;
                 }
+                
         }
         )
         

@@ -5,15 +5,8 @@ const fs = require('fs');
 
 const Nutritionfact = require('../models/nutritionfact');
 const multer  = require('multer')
-let storage = multer.diskStorage({
-  destination: function (req, file, cb) {
-    cb(null, '/Users/MASTER/code/nutridays')
-  },
-  filename: function (req, file, cb) {
-    cb(null, Date.now() + path.extname(file.originalname)) //Appending extension
-  }
-})
-let  upload = multer({storage});
+
+let  upload = multer({});
 
 router.route('/')
   .get((req, res) => {
@@ -29,7 +22,7 @@ router.route('/')
 
 router.post('/upload', upload.single('file'), (req, res) => {
   console.log('Here uploading ', req.file)
-
+  res.send({result: "success"})
 });
 
 router.route('/:id')
