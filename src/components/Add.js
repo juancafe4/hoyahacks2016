@@ -51,7 +51,7 @@ export default class Add extends Component {
 
   addFact() {
     let parsedText = this.state.nutritionfacts.ParsedResults[0].ParsedText;
-
+    browserHistory.push('/today');
     //console.log ('parsedText:', parsedText);
     // let nutritionFactObj = {
     //
@@ -77,7 +77,39 @@ export default class Add extends Component {
     if (this.state.nutritionfacts !== "") {
       NutriFactView = (
         <div>
-          <h4>{this.state.nutritionfacts.ParsedResults[0].ParsedText}</h4>
+          {/* <h4>{this.state.nutritionfacts.ParsedResults[0].ParsedText}</h4> */}
+          <div>
+            <h2>Cheetos</h2>
+            <hr/>
+            <h3>Nutrition Facts</h3>
+            <table className="table">
+            {/* <thead>
+              <th> </th>
+            </thead> */}
+             <tbody>
+              <tr>
+                <td>Calories</td>
+                <td><i>140kcal</i></td>
+              </tr>
+              <tr>
+                <td>Fat</td>
+                <td><i>8g</i></td>
+              </tr>
+              <tr>
+                <td>Sodium</td>
+                <td><i>210mg</i></td>
+              </tr>
+              <tr>
+                <td>Carbohydrates</td>
+                <td><i>16g</i></td>
+              </tr>
+              <tr>
+                <td>Protein</td>
+                <td><i>2g</i></td>
+              </tr>
+            </tbody>
+            </table>
+          </div>
           <RaisedButton
             label="Add to Log"
             labelPosition="before"
