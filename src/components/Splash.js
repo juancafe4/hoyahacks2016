@@ -8,7 +8,7 @@ export default class Splash extends Component {
           <h1 style={splash.brandName}>
             NutriDay
           </h1>
-          <p style={splash.moto}>Count your Daily Nutritions</p>
+          <h4 style={splash.moto}>Count your Daily Nutritions</h4>
         </div>
       </div>
     )
@@ -17,7 +17,7 @@ export default class Splash extends Component {
 
 const splashDiv = {
   backgroundColor: "#f4f4f4",
-  backgroundImage: "url('https://s-media-cache-ak0.pinimg.com/originals/84/21/70/842170d0c6dae05a7776d93009a8fbe5.jpg')",
+  backgroundImage: "url('http://www.hdbloggers.net/wp-content/uploads/2016/11/Wood-Wallpapers.jpg')",
   width: "auto",
   marginTop: "-60px",
   height: "100%",
@@ -32,6 +32,7 @@ const splash = {
     // lineHeight: '50vh'
   },
   moto: {
+    color: "silver"
     // lineHeight: '5vh',
   },
   brandName: {
