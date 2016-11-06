@@ -5,7 +5,7 @@ export default class App extends Component {
     return (
       <div>
         <NavBar/>
-        <div>
+        <div style={{marginTop: "60px"}}>
            {this.props.children}
         </div>
       </div>
