@@ -37,15 +37,16 @@ class AddViewController: UIViewController, UIImagePickerControllerDelegate,
     
     func UploadImage() {
         
-       let imageData = UIImageJPEGRepresentation(imageView.image!, 1)
+       let imageData = UIImageJPEGRepresentation(imageView.image!, 0.3)
        
         if (imageData == nil) {return ;}
         
         Alamofire.upload(
             multipartFormData: { multipartFormData in
-                multipartFormData.append(imageData!, withName: "nutrition.jpg", mimeType: "image.jpg")
+                multipartFormData.append(imageData!, withName: "file", fileName: "nutrition.jpg", mimeType: "image/jpg")
         },
-            to: "http://10.126.79.192:8080",
+            to: "http://10.126.79.192:8080/api/nutritionfacts/upload",
+            headers: ["Content-Type": "img/jpg"],
             encodingCompletion: { encodingResult in
                 switch encodingResult {
                 case .success(let upload, _, _):
@@ -57,7 +58,7 @@ class AddViewController: UIViewController, UIImagePickerControllerDelegate,
                 }
         }
         )
-
+        
     }
     
     
